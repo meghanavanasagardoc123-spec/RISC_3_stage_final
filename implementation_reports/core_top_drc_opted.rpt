@@ -1,0 +1,257 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sat May  9 17:21:43 2026
+| Host         : DESKTOP-6J96HA4 running 64-bit major release  (build 9200)
+| Command      : report_drc -file core_top_drc_opted.rpt -pb core_top_drc_opted.pb -rpx core_top_drc_opted.rpx
+| Design       : core_top
+| Device       : xc7z020clg484-1
+| Speed File   : -1
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 43
++---------+------------------+----------------------------+------------+
+| Rule    | Severity         | Description                | Violations |
++---------+------------------+----------------------------+------------+
+| LUTLP-1 | Critical Warning | Combinatorial Loop Alert   | 32         |
+| NSTD-1  | Critical Warning | Unspecified I/O Standard   | 1          |
+| UCIO-1  | Critical Warning | Unconstrained Logical Port | 1          |
+| DPIP-1  | Warning          | Input pipelining           | 4          |
+| DPOP-1  | Warning          | PREG Output pipelining     | 2          |
+| DPOP-2  | Warning          | MREG Output pipelining     | 2          |
+| ZPS7-1  | Warning          | PS7 block required         | 1          |
++---------+------------------+----------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+LUTLP-1#1 Critical Warning
+Combinatorial Loop Alert  
+4 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is u_decode_execute/u_fft_butterfly/exec_result_dec[12]. Please evaluate your design. The cells in the loop are: u_decode_execute/u_fft_butterfly/alu_result_out[12]_i_1, u_if_id_reg/alu_result_out[12]_i_2, u_mem_wb/u_mem_wb_reg/p_2_out_carry__2_i_7, u_mem_wb/u_mem_wb_reg/sum_imag_ext_carry__2_i_4.
+Related violations: <none>
+
+LUTLP-1#2 Critical Warning
+Combinatorial Loop Alert  
+5 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is u_decode_execute/u_fft_butterfly/exec_result_dec[0]. Please evaluate your design. The cells in the loop are: u_mem_wb/u_mem_wb_reg/bw_imag_full_i_16, u_decode_execute/u_fft_butterfly/bw_imag_full_i_42, u_if_id_reg/bw_imag_full_i_84, u_if_id_reg/p_2_out_carry_i_10, u_mem_wb/u_mem_wb_reg/sum_imag_ext_carry_i_15.
+Related violations: <none>
+
+LUTLP-1#3 Critical Warning
+Combinatorial Loop Alert  
+5 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is u_decode_execute/u_fft_butterfly/exec_result_dec[10]. Please evaluate your design. The cells in the loop are: u_decode_execute/u_fft_butterfly/alu_result_out[10]_i_1, u_if_id_reg/alu_result_out[10]_i_2, u_if_id_reg/alu_result_out[10]_i_4, u_mem_wb/u_mem_wb_reg/bw_imag_full_i_6, u_decode_execute/u_regfile/sum_imag_ext_carry__1_i_10.
+Related violations: <none>
+
+LUTLP-1#4 Critical Warning
+Combinatorial Loop Alert  
+5 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is u_decode_execute/u_fft_butterfly/exec_result_dec[11]. Please evaluate your design. The cells in the loop are: u_mem_wb/u_mem_wb_reg/bw_imag_full_i_5, u_decode_execute/u_fft_butterfly/bw_imag_full_i_21, u_if_id_reg/bw_imag_full_i_52, u_if_id_reg/bw_imag_full_i_87, u_decode_execute/u_regfile/sum_imag_ext_carry__1_i_9.
+Related violations: <none>
+
+LUTLP-1#5 Critical Warning
+Combinatorial Loop Alert  
+5 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is u_decode_execute/u_fft_butterfly/exec_result_dec[13]. Please evaluate your design. The cells in the loop are: u_decode_execute/u_fft_butterfly/alu_result_out[13]_i_1, u_if_id_reg/alu_result_out[13]_i_2, u_if_id_reg/alu_result_out[13]_i_3, u_mem_wb/u_mem_wb_reg/bw_imag_full_i_3, u_decode_execute/u_fft_butterfly/sum_imag_ext_carry__2_i_3.
+Related violations: <none>
+
+LUTLP-1#6 Critical Warning
+Combinatorial Loop Alert  
+5 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is u_decode_execute/u_fft_butterfly/exec_result_dec[14]. Please evaluate your design. The cells in the loop are: u_decode_execute/u_fft_butterfly/alu_result_out[14]_i_1, u_if_id_reg/alu_result_out[14]_i_2, u_if_id_reg/alu_result_out[14]_i_3, u_mem_wb/u_mem_wb_reg/bw_imag_full_i_2, u_mem_wb/u_mem_wb_reg/p_2_out_carry__2_i_2.
+Related violations: <none>
+
+LUTLP-1#7 Critical Warning
+Combinatorial Loop Alert  
+5 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is u_decode_execute/u_fft_butterfly/exec_result_dec[15]. Please evaluate your design. The cells in the loop are: u_decode_execute/u_fft_butterfly/alu_result_out[15]_i_1, u_if_id_reg/alu_result_out[15]_i_2, u_if_id_reg/alu_result_out[15]_i_3, u_mem_wb/u_mem_wb_reg/bw_imag_full_i_1, u_mem_wb/u_mem_wb_reg/sum_imag_ext_carry__2_i_9.
+Related violations: <none>
+
+LUTLP-1#8 Critical Warning
+Combinatorial Loop Alert  
+5 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is u_decode_execute/u_fft_butterfly/exec_result_dec[1]. Please evaluate your design. The cells in the loop are: u_mem_wb/u_mem_wb_reg/bw_imag_full_i_15, u_decode_execute/u_fft_butterfly/bw_imag_full_i_40, u_if_id_reg/bw_imag_full_i_81, u_if_id_reg/p_2_out_carry_i_9, u_mem_wb/u_mem_wb_reg/sum_imag_ext_carry_i_14.
+Related violations: <none>
+
+LUTLP-1#9 Critical Warning
+Combinatorial Loop Alert  
+5 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is u_decode_execute/u_fft_butterfly/exec_result_dec[20]. Please evaluate your design. The cells in the loop are: u_decode_execute/u_fft_butterfly/alu_result_out[20]_i_1, u_if_id_reg/alu_result_out[20]_i_2, u_if_id_reg/alu_result_out[20]_i_3, u_mem_wb/u_mem_wb_reg/mult_ri_i_12, u_mem_wb/u_mem_wb_reg/sum_real_ext_carry__0_i_9.
+Related violations: <none>
+
+LUTLP-1#10 Critical Warning
+Combinatorial Loop Alert  
+5 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is u_decode_execute/u_fft_butterfly/exec_result_dec[2]. Please evaluate your design. The cells in the loop are: u_mem_wb/u_mem_wb_reg/bw_imag_full_i_14, u_decode_execute/u_fft_butterfly/bw_imag_full_i_38, u_if_id_reg/bw_imag_full_i_78, u_if_id_reg/bw_imag_full_i_94, u_mem_wb/u_mem_wb_reg/sum_imag_ext_carry_i_2.
+Related violations: <none>
+
+LUTLP-1#11 Critical Warning
+Combinatorial Loop Alert  
+5 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is u_decode_execute/u_fft_butterfly/exec_result_dec[31]. Please evaluate your design. The cells in the loop are: u_decode_execute/u_fft_butterfly/alu_result_out[31]_i_1, u_if_id_reg/alu_result_out[31]_i_3, u_if_id_reg/alu_result_out[31]_i_6, u_mem_wb/u_mem_wb_reg/mult_ri_i_1, u_decode_execute/u_regfile/sum_real_ext_carry__2_i_9.
+Related violations: <none>
+
+LUTLP-1#12 Critical Warning
+Combinatorial Loop Alert  
+5 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is u_decode_execute/u_fft_butterfly/exec_result_dec[3]. Please evaluate your design. The cells in the loop are: u_mem_wb/u_mem_wb_reg/bw_imag_full_i_13, u_decode_execute/u_fft_butterfly/bw_imag_full_i_36, u_if_id_reg/bw_imag_full_i_75, u_if_id_reg/p_2_out_carry_i_7, u_decode_execute/u_regfile/sum_imag_ext_carry_i_13.
+Related violations: <none>
+
+LUTLP-1#13 Critical Warning
+Combinatorial Loop Alert  
+5 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is u_decode_execute/u_fft_butterfly/exec_result_dec[4]. Please evaluate your design. The cells in the loop are: u_mem_wb/u_mem_wb_reg/bw_imag_full_i_12, u_decode_execute/u_fft_butterfly/bw_imag_full_i_34, u_if_id_reg/bw_imag_full_i_72, u_if_id_reg/bw_imag_full_i_93, u_decode_execute/u_fft_butterfly/sum_imag_ext_carry__0_i_4.
+Related violations: <none>
+
+LUTLP-1#14 Critical Warning
+Combinatorial Loop Alert  
+5 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is u_decode_execute/u_fft_butterfly/exec_result_dec[5]. Please evaluate your design. The cells in the loop are: u_mem_wb/u_mem_wb_reg/bw_imag_full_i_11, u_decode_execute/u_fft_butterfly/bw_imag_full_i_32, u_if_id_reg/bw_imag_full_i_69, u_if_id_reg/bw_imag_full_i_92, u_decode_execute/u_regfile/sum_imag_ext_carry__0_i_9.
+Related violations: <none>
+
+LUTLP-1#15 Critical Warning
+Combinatorial Loop Alert  
+5 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is u_decode_execute/u_fft_butterfly/exec_result_dec[6]. Please evaluate your design. The cells in the loop are: u_mem_wb/u_mem_wb_reg/bw_imag_full_i_10, u_decode_execute/u_fft_butterfly/bw_imag_full_i_30, u_if_id_reg/bw_imag_full_i_66, u_if_id_reg/bw_imag_full_i_91, u_mem_wb/u_mem_wb_reg/sum_imag_ext_carry__0_i_2.
+Related violations: <none>
+
+LUTLP-1#16 Critical Warning
+Combinatorial Loop Alert  
+5 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is u_decode_execute/u_fft_butterfly/exec_result_dec[7]. Please evaluate your design. The cells in the loop are: u_mem_wb/u_mem_wb_reg/bw_imag_full_i_9, u_decode_execute/u_fft_butterfly/bw_imag_full_i_28, u_if_id_reg/bw_imag_full_i_63, u_if_id_reg/bw_imag_full_i_90, u_decode_execute/u_fft_butterfly/sum_imag_ext_carry__0_i_1.
+Related violations: <none>
+
+LUTLP-1#17 Critical Warning
+Combinatorial Loop Alert  
+5 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is u_decode_execute/u_fft_butterfly/exec_result_dec[8]. Please evaluate your design. The cells in the loop are: u_mem_wb/u_mem_wb_reg/bw_imag_full_i_8, u_decode_execute/u_fft_butterfly/bw_imag_full_i_26, u_if_id_reg/bw_imag_full_i_60, u_if_id_reg/bw_imag_full_i_89, u_decode_execute/u_fft_butterfly/sum_imag_ext_carry__1_i_4.
+Related violations: <none>
+
+LUTLP-1#18 Critical Warning
+Combinatorial Loop Alert  
+5 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is u_decode_execute/u_fft_butterfly/exec_result_dec[9]. Please evaluate your design. The cells in the loop are: u_mem_wb/u_mem_wb_reg/bw_imag_full_i_7, u_decode_execute/u_fft_butterfly/bw_imag_full_i_24, u_if_id_reg/bw_imag_full_i_57, u_if_id_reg/bw_imag_full_i_88, u_decode_execute/u_fft_butterfly/sum_imag_ext_carry__1_i_3.
+Related violations: <none>
+
+LUTLP-1#19 Critical Warning
+Combinatorial Loop Alert  
+6 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is u_decode_execute/u_fft_butterfly/exec_result_dec[16]. Please evaluate your design. The cells in the loop are: u_decode_execute/u_fft_butterfly/alu_result_out[16]_i_1, u_if_id_reg/alu_result_out[16]_i_2, u_if_id_reg/alu_result_out[16]_i_3, u_mem_wb/u_mem_wb_reg/alu_result_out[16]_i_4, u_mem_wb/u_mem_wb_reg/mult_ri_i_16, u_mem_wb/u_mem_wb_reg/sum_real_ext_carry_i_4.
+Related violations: <none>
+
+LUTLP-1#20 Critical Warning
+Combinatorial Loop Alert  
+6 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is u_decode_execute/u_fft_butterfly/exec_result_dec[17]. Please evaluate your design. The cells in the loop are: u_decode_execute/u_fft_butterfly/alu_result_out[17]_i_1, u_if_id_reg/alu_result_out[17]_i_2, u_if_id_reg/alu_result_out[17]_i_3, u_mem_wb/u_mem_wb_reg/alu_result_out[17]_i_4, u_mem_wb/u_mem_wb_reg/mult_ri_i_15, u_mem_wb/u_mem_wb_reg/sum_real_ext_carry_i_3.
+Related violations: <none>
+
+LUTLP-1#21 Critical Warning
+Combinatorial Loop Alert  
+6 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is u_decode_execute/u_fft_butterfly/exec_result_dec[18]. Please evaluate your design. The cells in the loop are: u_decode_execute/u_fft_butterfly/alu_result_out[18]_i_1, u_if_id_reg/alu_result_out[18]_i_2, u_if_id_reg/alu_result_out[18]_i_3, u_mem_wb/u_mem_wb_reg/alu_result_out[18]_i_4, u_mem_wb/u_mem_wb_reg/mult_ri_i_14, u_mem_wb/u_mem_wb_reg/sum_real_ext_carry_i_2.
+Related violations: <none>
+
+LUTLP-1#22 Critical Warning
+Combinatorial Loop Alert  
+6 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is u_decode_execute/u_fft_butterfly/exec_result_dec[19]. Please evaluate your design. The cells in the loop are: u_decode_execute/u_fft_butterfly/alu_result_out[19]_i_1, u_mem_wb/u_mem_wb_reg/alu_result_out[19]_i_2, u_if_id_reg/alu_result_out[19]_i_3, u_mem_wb/u_mem_wb_reg/alu_result_out[19]_i_4, u_mem_wb/u_mem_wb_reg/mult_ri_i_13, u_mem_wb/u_mem_wb_reg/sum_real_ext_carry_i_1.
+Related violations: <none>
+
+LUTLP-1#23 Critical Warning
+Combinatorial Loop Alert  
+6 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is u_decode_execute/u_fft_butterfly/exec_result_dec[21]. Please evaluate your design. The cells in the loop are: u_decode_execute/u_fft_butterfly/alu_result_out[21]_i_1, u_if_id_reg/alu_result_out[21]_i_2, u_if_id_reg/alu_result_out[21]_i_3, u_mem_wb/u_mem_wb_reg/alu_result_out[21]_i_4, u_mem_wb/u_mem_wb_reg/mult_ri_i_11, u_mem_wb/u_mem_wb_reg/sum_real_ext_carry__0_i_3.
+Related violations: <none>
+
+LUTLP-1#24 Critical Warning
+Combinatorial Loop Alert  
+6 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is u_decode_execute/u_fft_butterfly/exec_result_dec[22]. Please evaluate your design. The cells in the loop are: u_decode_execute/u_fft_butterfly/alu_result_out[22]_i_1, u_if_id_reg/alu_result_out[22]_i_2, u_if_id_reg/alu_result_out[22]_i_3, u_mem_wb/u_mem_wb_reg/alu_result_out[22]_i_4, u_mem_wb/u_mem_wb_reg/mult_ri_i_10, u_mem_wb/u_mem_wb_reg/sum_real_ext_carry__0_i_2.
+Related violations: <none>
+
+LUTLP-1#25 Critical Warning
+Combinatorial Loop Alert  
+6 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is u_decode_execute/u_fft_butterfly/exec_result_dec[23]. Please evaluate your design. The cells in the loop are: u_decode_execute/u_fft_butterfly/alu_result_out[23]_i_1, u_if_id_reg/alu_result_out[23]_i_2, u_if_id_reg/alu_result_out[23]_i_3, u_mem_wb/u_mem_wb_reg/alu_result_out[23]_i_4, u_mem_wb/u_mem_wb_reg/mult_ri_i_9, u_mem_wb/u_mem_wb_reg/sum_real_ext_carry__0_i_1.
+Related violations: <none>
+
+LUTLP-1#26 Critical Warning
+Combinatorial Loop Alert  
+6 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is u_decode_execute/u_fft_butterfly/exec_result_dec[24]. Please evaluate your design. The cells in the loop are: u_decode_execute/u_fft_butterfly/alu_result_out[24]_i_1, u_if_id_reg/alu_result_out[24]_i_2, u_if_id_reg/instr_out[0]_i_7, u_if_id_reg/instr_out[0]_i_8, u_mem_wb/u_mem_wb_reg/mult_ri_i_26, u_mem_wb/u_mem_wb_reg/sum_real_ext_carry__1_i_9.
+Related violations: <none>
+
+LUTLP-1#27 Critical Warning
+Combinatorial Loop Alert  
+6 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is u_decode_execute/u_fft_butterfly/exec_result_dec[25]. Please evaluate your design. The cells in the loop are: u_decode_execute/u_fft_butterfly/alu_result_out[25]_i_1, u_mem_wb/u_mem_wb_reg/alu_result_out[25]_i_2, u_if_id_reg/alu_result_out[25]_i_3, u_mem_wb/u_mem_wb_reg/alu_result_out[25]_i_4, u_mem_wb/u_mem_wb_reg/mult_ri_i_7, u_mem_wb/u_mem_wb_reg/sum_real_ext_carry__1_i_3.
+Related violations: <none>
+
+LUTLP-1#28 Critical Warning
+Combinatorial Loop Alert  
+6 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is u_decode_execute/u_fft_butterfly/exec_result_dec[26]. Please evaluate your design. The cells in the loop are: u_decode_execute/u_fft_butterfly/alu_result_out[26]_i_1, u_mem_wb/u_mem_wb_reg/alu_result_out[26]_i_2, u_if_id_reg/alu_result_out[26]_i_3, u_mem_wb/u_mem_wb_reg/alu_result_out[26]_i_4, u_mem_wb/u_mem_wb_reg/mult_ri_i_6, u_mem_wb/u_mem_wb_reg/sum_real_ext_carry__1_i_2.
+Related violations: <none>
+
+LUTLP-1#29 Critical Warning
+Combinatorial Loop Alert  
+6 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is u_decode_execute/u_fft_butterfly/exec_result_dec[27]. Please evaluate your design. The cells in the loop are: u_decode_execute/u_fft_butterfly/alu_result_out[27]_i_1, u_if_id_reg/alu_result_out[27]_i_2, u_if_id_reg/alu_result_out[27]_i_3, u_mem_wb/u_mem_wb_reg/alu_result_out[27]_i_4, u_mem_wb/u_mem_wb_reg/mult_ri_i_5, u_mem_wb/u_mem_wb_reg/sum_real_ext_carry__1_i_1.
+Related violations: <none>
+
+LUTLP-1#30 Critical Warning
+Combinatorial Loop Alert  
+6 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is u_decode_execute/u_fft_butterfly/exec_result_dec[28]. Please evaluate your design. The cells in the loop are: u_decode_execute/u_fft_butterfly/alu_result_out[28]_i_1, u_if_id_reg/alu_result_out[28]_i_2, u_if_id_reg/instr_out[0]_i_9, u_if_id_reg/instr_out[0]_i_10, u_mem_wb/u_mem_wb_reg/mult_ri_i_22, u_mem_wb/u_mem_wb_reg/sum_real_ext_carry__2_i_10.
+Related violations: <none>
+
+LUTLP-1#31 Critical Warning
+Combinatorial Loop Alert  
+6 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is u_decode_execute/u_fft_butterfly/exec_result_dec[29]. Please evaluate your design. The cells in the loop are: u_decode_execute/u_fft_butterfly/alu_result_out[29]_i_1, u_if_id_reg/alu_result_out[29]_i_2, u_if_id_reg/alu_result_out[29]_i_3, u_mem_wb/u_mem_wb_reg/alu_result_out[29]_i_4, u_mem_wb/u_mem_wb_reg/mult_ri_i_3, u_mem_wb/u_mem_wb_reg/sum_real_ext_carry__2_i_3.
+Related violations: <none>
+
+LUTLP-1#32 Critical Warning
+Combinatorial Loop Alert  
+6 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is u_decode_execute/u_fft_butterfly/exec_result_dec[30]. Please evaluate your design. The cells in the loop are: u_decode_execute/u_fft_butterfly/alu_result_out[30]_i_1, u_if_id_reg/alu_result_out[30]_i_2, u_if_id_reg/alu_result_out[30]_i_3, u_if_id_reg/alu_result_out[30]_i_4, u_mem_wb/u_mem_wb_reg/mult_ri_i_2, u_mem_wb/u_mem_wb_reg/sum_real_ext_carry__2_i_2.
+Related violations: <none>
+
+NSTD-1#1 Critical Warning
+Unspecified I/O Standard  
+97 out of 99 logical ports use I/O standard (IOSTANDARD) value 'DEFAULT', instead of a user assigned specific value. This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all I/O standards. This design will fail to generate a bitstream unless all logical ports have a user specified I/O standard value defined. To allow bitstream creation with unspecified I/O standard values (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks NSTD-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run. Problem ports: debug_instr[31:0], debug_pc[31:0], debug_wb_data[31:0], debug_wb_reg_write.
+Related violations: <none>
+
+UCIO-1#1 Critical Warning
+Unconstrained Logical Port  
+97 out of 99 logical ports have no user assigned specific location constraint (LOC). This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all pin locations. This design will fail to generate a bitstream unless all logical ports have a user specified site LOC constraint defined.  To allow bitstream creation with unspecified pin locations (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks UCIO-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run.  Problem ports: debug_instr[31:0], debug_pc[31:0], debug_wb_data[31:0], debug_wb_reg_write.
+Related violations: <none>
+
+DPIP-1#1 Warning
+Input pipelining  
+DSP u_decode_execute/u_fft_butterfly/bw_imag_full input u_decode_execute/u_fft_butterfly/bw_imag_full/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#2 Warning
+Input pipelining  
+DSP u_decode_execute/u_fft_butterfly/bw_real_full input u_decode_execute/u_fft_butterfly/bw_real_full/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#3 Warning
+Input pipelining  
+DSP u_decode_execute/u_fft_butterfly/mult_ri input u_decode_execute/u_fft_butterfly/mult_ri/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#4 Warning
+Input pipelining  
+DSP u_decode_execute/u_fft_butterfly/mult_rr input u_decode_execute/u_fft_butterfly/mult_rr/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPOP-1#1 Warning
+PREG Output pipelining  
+DSP u_decode_execute/u_fft_butterfly/bw_imag_full output u_decode_execute/u_fft_butterfly/bw_imag_full/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#2 Warning
+PREG Output pipelining  
+DSP u_decode_execute/u_fft_butterfly/bw_real_full output u_decode_execute/u_fft_butterfly/bw_real_full/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-2#1 Warning
+MREG Output pipelining  
+DSP u_decode_execute/u_fft_butterfly/bw_imag_full multiplier stage u_decode_execute/u_fft_butterfly/bw_imag_full/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#2 Warning
+MREG Output pipelining  
+DSP u_decode_execute/u_fft_butterfly/bw_real_full multiplier stage u_decode_execute/u_fft_butterfly/bw_real_full/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+ZPS7-1#1 Warning
+PS7 block required  
+The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+Related violations: <none>
+
+

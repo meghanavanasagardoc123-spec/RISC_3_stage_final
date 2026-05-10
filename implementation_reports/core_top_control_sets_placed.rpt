@@ -1,0 +1,101 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sat May  9 17:22:40 2026
+| Host         : DESKTOP-6J96HA4 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file core_top_control_sets_placed.rpt
+| Design       : core_top
+| Device       : xc7z020
+-------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    31 |
+| Unused register locations in slices containing registers |    93 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            1 |
+|      2 |            7 |
+|      4 |            2 |
+|      9 |            1 |
+|     14 |            2 |
+|     15 |           10 |
+|    16+ |            8 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               0 |            0 |
+| No           | No                    | Yes                    |             145 |           43 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |             306 |          164 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+-----------------------------------------------+-------------------------------+------------------+----------------+
+|  Clock Signal  |                 Enable Signal                 |        Set/Reset Signal       | Slice Load Count | Bel Load Count |
++----------------+-----------------------------------------------+-------------------------------+------------------+----------------+
+|  clk_IBUF_BUFG |                                               | u_mem_wb/u_mem_wb_reg/rst_n_2 |                1 |              1 |
+|  clk_IBUF_BUFG | u_mem_wb/u_mem_wb_reg/rd_addr_out_reg[0]_2[0] | u_mem_wb/u_mem_wb_reg/rst_n   |                1 |              2 |
+|  clk_IBUF_BUFG | u_mem_wb/u_mem_wb_reg/rd_addr_out_reg[0]_4[0] | u_mem_wb/u_mem_wb_reg/rst_n   |                1 |              2 |
+|  clk_IBUF_BUFG | u_mem_wb/u_mem_wb_reg/rd_addr_out_reg[0]_0[0] | u_mem_wb/u_mem_wb_reg/rst_n   |                1 |              2 |
+|  clk_IBUF_BUFG | u_mem_wb/u_mem_wb_reg/rd_addr_out_reg[0]_3[0] | u_mem_wb/u_mem_wb_reg/rst_n   |                1 |              2 |
+|  clk_IBUF_BUFG | u_mem_wb/u_mem_wb_reg/rd_addr_out_reg[0]_1[0] | u_mem_wb/u_mem_wb_reg/rst_n   |                1 |              2 |
+|  clk_IBUF_BUFG | u_mem_wb/u_mem_wb_reg/rd_addr_out_reg[0]_5[0] | u_mem_wb/u_mem_wb_reg/rst_n   |                1 |              2 |
+|  clk_IBUF_BUFG | u_mem_wb/u_mem_wb_reg/E[0]                    | u_mem_wb/u_mem_wb_reg/rst_n   |                2 |              2 |
+|  clk_IBUF_BUFG | u_id_ex_reg/p_0_in_0                          | u_mem_wb/u_mem_wb_reg/rst_n   |                3 |              4 |
+|  clk_IBUF_BUFG | u_if_id_reg/pc_out[31]_i_1_n_0                | u_mem_wb/u_mem_wb_reg/rst_n_2 |                3 |              4 |
+|  clk_IBUF_BUFG | u_if_id_reg/pc_out[31]_i_1_n_0                | u_mem_wb/u_mem_wb_reg/rst_n_1 |                6 |              9 |
+|  clk_IBUF_BUFG | u_mem_wb/u_mem_wb_reg/rd_addr_out_reg[0]_3[0] | u_mem_wb/u_mem_wb_reg/rst_n_1 |                8 |             14 |
+|  clk_IBUF_BUFG | u_mem_wb/u_mem_wb_reg/rd_addr_out_reg[0]_5[0] | u_mem_wb/u_mem_wb_reg/rst_n_1 |                9 |             14 |
+|  clk_IBUF_BUFG | u_mem_wb/u_mem_wb_reg/rd_addr_out_reg[0]_2[0] | u_mem_wb/u_mem_wb_reg/rst_n_1 |                7 |             15 |
+|  clk_IBUF_BUFG | u_mem_wb/u_mem_wb_reg/rd_addr_out_reg[0]_2[0] | u_mem_wb/u_mem_wb_reg/rst_n_2 |                8 |             15 |
+|  clk_IBUF_BUFG | u_mem_wb/u_mem_wb_reg/rd_addr_out_reg[0]_4[0] | u_mem_wb/u_mem_wb_reg/rst_n_1 |                8 |             15 |
+|  clk_IBUF_BUFG | u_mem_wb/u_mem_wb_reg/rd_addr_out_reg[0]_4[0] | u_mem_wb/u_mem_wb_reg/rst_n_2 |               10 |             15 |
+|  clk_IBUF_BUFG | u_mem_wb/u_mem_wb_reg/rd_addr_out_reg[0]_0[0] | u_mem_wb/u_mem_wb_reg/rst_n_1 |                7 |             15 |
+|  clk_IBUF_BUFG | u_mem_wb/u_mem_wb_reg/rd_addr_out_reg[0]_0[0] | u_mem_wb/u_mem_wb_reg/rst_n_2 |                9 |             15 |
+|  clk_IBUF_BUFG | u_mem_wb/u_mem_wb_reg/rd_addr_out_reg[0]_1[0] | u_mem_wb/u_mem_wb_reg/rst_n_1 |                6 |             15 |
+|  clk_IBUF_BUFG | u_mem_wb/u_mem_wb_reg/rd_addr_out_reg[0]_1[0] | u_mem_wb/u_mem_wb_reg/rst_n_2 |                9 |             15 |
+|  clk_IBUF_BUFG | u_mem_wb/u_mem_wb_reg/E[0]                    | u_mem_wb/u_mem_wb_reg/rst_n_1 |                8 |             15 |
+|  clk_IBUF_BUFG | u_mem_wb/u_mem_wb_reg/E[0]                    | u_mem_wb/u_mem_wb_reg/rst_n_2 |                7 |             15 |
+|  clk_IBUF_BUFG | u_mem_wb/u_mem_wb_reg/rd_addr_out_reg[0]_3[0] | u_mem_wb/u_mem_wb_reg/rst_n_2 |                9 |             16 |
+|  clk_IBUF_BUFG | u_mem_wb/u_mem_wb_reg/rd_addr_out_reg[0]_5[0] | u_mem_wb/u_mem_wb_reg/rst_n_2 |               12 |             16 |
+|  clk_IBUF_BUFG | u_if_id_reg/pc_out[31]_i_1_n_0                | u_mem_wb/u_mem_wb_reg/rst_n   |                7 |             16 |
+|  clk_IBUF_BUFG | u_if_id_reg/pc_out[31]_i_1_n_0                | u_mem_wb/u_mem_wb_reg/rst_n_0 |               12 |             21 |
+|  clk_IBUF_BUFG | u_id_ex_reg/p_0_in_0                          | u_mem_wb/u_mem_wb_reg/rst_n_0 |                8 |             28 |
+|  clk_IBUF_BUFG |                                               | u_mem_wb/u_mem_wb_reg/rst_n_0 |               16 |             65 |
+|  clk_IBUF_BUFG |                                               | u_mem_wb/u_mem_wb_reg/rst_n   |               26 |             79 |
+|  clk_IBUF_BUFG | u_id_ex_reg/p_0_in                            |                               |               32 |            128 |
++----------------+-----------------------------------------------+-------------------------------+------------------+----------------+
+
+
