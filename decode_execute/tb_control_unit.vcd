@@ -1,0 +1,262 @@
+$date
+	Sat May 02 16:07:40 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_control_unit $end
+$var wire 1 ! valid_instr $end
+$var wire 1 " reg_write $end
+$var wire 1 # mem_write $end
+$var wire 1 $ mem_to_reg $end
+$var wire 1 % mem_read $end
+$var wire 1 & jump $end
+$var wire 1 ' fft_en $end
+$var wire 1 ( branch_ne $end
+$var wire 1 ) branch $end
+$var wire 1 * alu_src $end
+$var wire 4 + alu_ctrl [3:0] $end
+$var reg 3 , funct3 [2:0] $end
+$var reg 7 - funct7 [6:0] $end
+$var reg 7 . opcode [6:0] $end
+$var integer 32 / errors [31:0] $end
+$scope module uut $end
+$var wire 3 0 funct3 [2:0] $end
+$var wire 7 1 funct7 [6:0] $end
+$var wire 7 2 opcode [6:0] $end
+$var parameter 4 3 ALU_ADD $end
+$var parameter 4 4 ALU_AND $end
+$var parameter 4 5 ALU_OR $end
+$var parameter 4 6 ALU_PASS_B $end
+$var parameter 4 7 ALU_SUB $end
+$var parameter 4 8 ALU_XOR $end
+$var parameter 7 9 OPCODE_BRANCH $end
+$var parameter 7 : OPCODE_FFT $end
+$var parameter 7 ; OPCODE_JAL $end
+$var parameter 7 < OPCODE_LOAD $end
+$var parameter 7 = OPCODE_RTYPE $end
+$var parameter 7 > OPCODE_STORE $end
+$var reg 4 ? alu_ctrl [3:0] $end
+$var reg 1 * alu_src $end
+$var reg 1 ) branch $end
+$var reg 1 ( branch_ne $end
+$var reg 1 ' fft_en $end
+$var reg 1 & jump $end
+$var reg 1 % mem_read $end
+$var reg 1 $ mem_to_reg $end
+$var reg 1 # mem_write $end
+$var reg 1 " reg_write $end
+$var reg 1 ! valid_instr $end
+$upscope $end
+$scope task check $end
+$var reg 4 @ exp_alu_ctrl [3:0] $end
+$var reg 1 A exp_alu_src $end
+$var reg 1 B exp_branch $end
+$var reg 1 C exp_branch_ne $end
+$var reg 1 D exp_fft_en $end
+$var reg 1 E exp_jump $end
+$var reg 1 F exp_mem_read $end
+$var reg 1 G exp_mem_to_reg $end
+$var reg 1 H exp_mem_write $end
+$var reg 1 I exp_reg_write $end
+$var reg 1 J exp_valid $end
+$var reg 128 K name [127:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b100011 >
+b110011 =
+b11 <
+b1101111 ;
+b111011 :
+b1100011 9
+b100 8
+b1 7
+b101 6
+b11 5
+b10 4
+b0 3
+$end
+#0
+$dumpvars
+b1010010001011010111010001111001011100000110010100100000010000010100010001000100 K
+1J
+1I
+0H
+0G
+0F
+0E
+0D
+0C
+0B
+0A
+b0 @
+b0 ?
+b110011 2
+b0 1
+b0 0
+b0 /
+b110011 .
+b0 -
+b0 ,
+b0 +
+0*
+0)
+0(
+0'
+0&
+0%
+0$
+0#
+1"
+1!
+$end
+#1000
+b1 +
+b1 ?
+1!
+1"
+b1010010001011010111010001111001011100000110010100100000010100110101010101000010 K
+b1 @
+b100000 -
+b100000 1
+#2000
+1!
+b10 +
+b10 ?
+1"
+b1010010001011010111010001111001011100000110010100100000010000010100111001000100 K
+b10 @
+b0 -
+b0 1
+b111 ,
+b111 0
+#3000
+1!
+b11 +
+b11 ?
+1"
+b10100100010110101110100011110010111000001100101001000000100111101010010 K
+b11 @
+b110 ,
+b110 0
+#4000
+1!
+b100 +
+b100 ?
+1"
+b1010010001011010111010001111001011100000110010100100000010110000100111101010010 K
+b100 @
+b100 ,
+b100 0
+#5000
+1*
+1$
+1%
+1!
+b0 +
+b0 ?
+1"
+b100110001010111 K
+b0 @
+1A
+1G
+1F
+b10 ,
+b10 0
+b11 .
+b11 2
+#6000
+1#
+1!
+1*
+0$
+0%
+0"
+b101001101010111 K
+0G
+1H
+0F
+0I
+b100011 .
+b100011 2
+#7000
+1)
+b1 +
+b1 ?
+1!
+0*
+0#
+b10000100100010101010001 K
+1B
+b1 @
+0A
+0H
+b0 ,
+b0 0
+b1100011 .
+b1100011 2
+#8000
+1(
+1!
+1)
+b1 +
+b1 ?
+b10000100100111001000101 K
+1C
+b1 ,
+b1 0
+#9000
+1&
+1"
+1!
+0(
+0)
+b0 +
+b0 ?
+b10010100100000101001100 K
+1E
+0C
+0B
+b0 @
+1I
+b0 ,
+b0 0
+b1101111 .
+b1101111 2
+#10000
+1'
+1!
+0&
+1"
+b1000011011101010111001101110100011011110110110100100000010001100100011001010100 K
+1D
+0E
+b1 -
+b1 1
+b111011 .
+b111011 2
+#11000
+0!
+0'
+0"
+b1110110011000010110110001101001011001000010000001000110010001100101010000100000011001100111010101101110011000110111010000110011 K
+0J
+0D
+0I
+b1 ,
+b1 0
+#12000
+b101010101101110011010110110111001101111011101110110111000100000011011110111000001100011011011110110010001100101 K
+b0 -
+b0 1
+b0 ,
+b0 0
+b1111111 .
+b1111111 2
+#13000

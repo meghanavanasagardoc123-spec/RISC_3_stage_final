@@ -1,0 +1,21 @@
+iverilog -o fetch_tb fetch_stage.v tb_fetch_stage.v
+vvp fetch_tb
+gtkwave tb_fetch_stage.vcd
+
+iverilog -o decode_execute_tb \
+  decode_execute.v tb_decode_execute.v \
+  imm_gen.v control_unit.v regfile.v alu.v fft_butterfly.v
+vvp decode_execute_tb
+gtkwave tb_decode_execute.vcd
+
+iverilog -o mem_wb_tb \
+  mem_wb.v mem_wb_reg.v wb_mux.v tb_mem_wb.v
+vvp mem_wb_tb
+gtkwave tb_mem_wb.vcd
+
+iverilog -o core_top_tb \
+  core_top.v fetch_stage.v decode_execute.v mem_wb.v mem_wb_reg.v wb_mux.v \
+  pc_reg.v instr_mem.v regfile.v imm_gen.v control_unit.v alu.v fft_butterfly.v \
+  data_mem.v tb_core_top.v
+vvp core_top_tb
+gtkwave tb_core_top.vcd
