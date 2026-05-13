@@ -32,12 +32,7 @@ Outputs:
 - imm_out : 32-bit sign-extended immediate value corresponding to the
             instruction format; 32'b0 for instructions with no immediate
 
-Notes:
-- No external imm_sel control is required
-- Immediate format is selected directly using opcode decode
-- Pure combinational logic
-- Suitable for subset-based RV32I decode/execute stage
-------------------------------------------------------------------------------
+-------------
 */
 
 module imm_gen (
