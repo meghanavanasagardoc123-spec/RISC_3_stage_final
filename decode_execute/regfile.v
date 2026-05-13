@@ -1,14 +1,5 @@
 
-/*This structure matches the expected RISC-V register file behavior: x0 is hardwired to zero, writes to x0 are ignored, and the design supports two simultaneous reads and one write. That is exactly the behavior expected for RV32I integer registers and is the standard organization used in simple RISC-V cores.
-
-Design notes
-A few important points about this implementation:
-
-regs[0] <= 0 is kept explicitly so even accidental corruption gets overwritten on every clock edge.
-
-Reset initializes all registers to zero, which is useful for simulation clarity even though not all real hardware register files are physically reset this way.
-
-Reads are combinational, which is the simplest and most common style for student RV32I processor projects*/
+/*c*/
 `include "riscv_defines.vh"
 
 module regfile (
