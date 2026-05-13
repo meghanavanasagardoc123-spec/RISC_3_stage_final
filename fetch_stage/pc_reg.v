@@ -22,15 +22,7 @@ Major inputs:
 Major outputs:
 - pc_out     : Current PC value
 
-Notes:
-- Sequential logic block
-- On reset, PC is initialized to RESET_PC
-- If stall = 1, current PC is retained
-- Otherwise, PC is updated with next_pc
-- Written in Verilog-only style for Icarus compatibility
 
-Run note:
-- This is an RTL module, so it is compiled together with its testbench
 ------------------------------------------------------------------------------
 */
 
