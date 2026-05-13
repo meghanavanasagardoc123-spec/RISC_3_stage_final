@@ -20,14 +20,7 @@ Major inputs:
 Major outputs:
 - instr_out     : 32-bit fetched instruction
 
-Notes:
-- Pure combinational ROM model
-- No initial block, no $readmemh
-- Suitable for stricter synthesizable RTL coding style
-- Lower 2 bits of PC are ignored because instructions are 32-bit aligned
-- Unused addresses return 32'h0000_0000
-- Replace ROM contents below with your actual program instructions
-------------------------------------------------------------------------------
+
 */
 
 module instr_mem (
